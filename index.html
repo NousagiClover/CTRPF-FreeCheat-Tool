@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>フリチ作成ツール</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div>
+		<h2>入力欄</h2>
+		<p>チートコード</p>
+		<textarea id="code" rows="15" cols="20"></textarea>
+		<p>
+			<label class="form-cheat">チート名</label>
+			<input id="name" type="text" placeholder="例: 体力無限">
+			<label class="color">Color #</label>
+			<input id="nameColor" class="short" type="text">
+		</p>
+		<p>
+			<label class="form-cheat">チート説明</label>
+			<input id="info" type="text" placeholder="説明は無くてもOK">
+			<label class="color">Color #</label>
+			<input id="infoColor" class="short" type="text">
+		</p>
+		<p>
+			<label class="form-cheat">フォルダ名</label>
+			<input id="folder" type="text" placeholder="例: プレイヤー">
+			<label class="color">Color #</label>
+			<input id="folderColor" class="short" type="text">
+		</p>
+		<p>
+			<label class="form-cheat">ベースカラー</label>
+			<input id="base" class="short" type="text">
+		</p>
+		<p>
+			<label class="form-cheat">インデックス</label>
+			<input id="index" class="short" type="number" onblur="test(event);" value="0">
+		</p>
+		<p>
+			<label class="blue" onclick="addcode();">追加</label>
+			<label class="blue" onclick="mkFolder();">フォルダ</label>
+			<label class="blue" onclick="clFolder();">閉じる</label>
+			<label class="red" onclick="cle();">クリア</label>
+		</p>
+		<p id="root"></p>
+	</div>
+	
+	<div>
+	<h2>ソースコード (出力)</h2>
+	<textarea id="cheat" rows="15" cols="20"></textarea>
+	<p>
+		<label class="green" onclick="download();">ダウンロード</label>
+		<label class="red" onclick="line();">一つ削除</label>
+		<label class="red" onclick="del();">削除</label>
+	</p>
+	</div>
+	
+	<div>
+		<p>Version 1.1.0</p>
+		<p>【 利用規約 】</p>
+		<p>このサイトで作ったチートコードを使用する際は完全自己責任でお願いします。</p>
+		<p>アップデート履歴は<a href="update.html">こちら</a></p>
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>
